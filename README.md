@@ -65,3 +65,37 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 ## Data Lineage (Graphic View of DAG)
 
 ![Project Data Lineage!](./images/data_lineage.png)
+
+## Project Steps
+
+#### 1. Start DAG
+
+  - A dummy task just for representing a start of a dag run
+  
+#### 2. Create tables
+
+  - Create Amazon Redshift tables for staging and dimension/fact tables
+
+#### 3. Load S3 files into staging tables
+
+  - Read Song dataset from S3 and load into staging table in Redshift
+  - Read Event dataset from S3 and load into staging table in Redshift
+  
+#### 4. Load songplays fact data
+
+  - Using data in staging tables, build & load songplays fact data
+  
+#### 5. Load dimension data
+
+  - users, songs, artists dimension data is built using staging data
+  - time dimention data is built using staging data and songplays data
+  - Because time is relying on songplays data, loading dimension is performed after loading songplay data
+
+#### 6. Check data quality
+
+  - Simple basic data quality is performed
+  - In this example, 2 cases are checked: a case where count=0, another case where count > 0
+
+#### 7. End DAG
+
+  - A dummy task just for representing an end of a dag run
