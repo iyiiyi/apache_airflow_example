@@ -61,3 +61,7 @@ log_data/2018/11/2018-11-13-events.json
 
 And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
 ![Log file sample!](https://github.com/iyiiyi/spark_datalake/raw/master/images/log-data.png "2018-11-12-events.json")
+
+## Data Lineage (Graphic View of DAG)
+
+![Project Data Lineage!](./images/data_lineage.png)
