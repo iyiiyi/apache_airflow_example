@@ -99,3 +99,28 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 #### 7. End DAG
 
   - A dummy task just for representing an end of a dag run
+
+
+## Schema for Song Play Analysis
+
+#### `Fact table`
+1. `songplays` 
+  - Fields: playid, start_time, userid, level, songid, artistid, sessionid, location, user_agent
+  - Only include records with page value is 'NextSong' from Log dataset
+
+#### `Dimension tables`
+1. `users`
+  - Fields: userid, first_name, last_name, gender, level
+  - userid field must be unique
+  
+2. `songs`
+  - Fields: songid, title, artistid, year, duration
+  - songid field must be unique
+  
+3. `artists`
+  - Fields: artistid, name, location, lattitude, longitude
+  - artistid field must be unique
+  
+4. `time`
+  - Fields: start_time, hour, day, week, month, year, weekday
+  - start_time field must be unique
