@@ -142,3 +142,14 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
   - airflow/plugins/operators/load_fact.py : Operator file for loading songplays fact data
   - airflow/plugins/operators/load_dimension.py : Operator file for loading dimension data
   - airflow/plugins/operators/data_quality.py : Operator file for checking data quality
+
+## Running Programs
+With Apache Airflow running
+
+#### 1. Locate DAG from Airflow dashboard
+
+![DAG list!](./images/dag_list.png)
+
+#### 2. Start DAG
+
+![DAG running!](./images/dag_list_running.png)
