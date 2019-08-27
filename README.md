@@ -146,10 +146,20 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 ## Running Programs
 With Apache Airflow running
 
-#### 1. Locate DAG from Airflow dashboard
+#### 1. Configure AWS Key & Redshift connections
+
+  - AWS Access Key
+
+![AWS Access Key!](./images/aws_credentials_connection.png)
+
+  - Redshift cluster connection
+
+![Redshift connection!](./images/redshift_connection.png)
+
+#### 2. Locate DAG from Airflow dashboard
 
 ![DAG list!](./images/dag_list.png)
 
-#### 2. Start DAG
+#### 3. Start DAG
 
 ![DAG running!](./images/dag_list_running.png)
