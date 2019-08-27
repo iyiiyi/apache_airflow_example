@@ -25,7 +25,7 @@ When workflows are defined as code, they become more maintainable, versionable, 
 
 #### 2. Apache Airflow Components
 
-![Apache Airflow Components!](https://jaceklaskowski.gitbooks.io/mastering-apache-spark/diagrams/spark-platform.png)
+![Apache Airflow Components!](https://video.udacity-data.com/topher/2019/February/5c5f6105_airflow-diagram/airflow-diagram.png)
 
   - <b>Scheduler</b> orchestrates the execution of jobs on a trigger or schedule. The Scheduler chooses how to prioritize the running and execution of tasks within the system. You can learn more about the Scheduler from the official [Apache Airflow documentation](https://airflow.apache.org/scheduler.html).
   - <b>Work Queue</b> is used by the scheduler in most Airflow installations to deliver tasks that need to be run to the Workers.
