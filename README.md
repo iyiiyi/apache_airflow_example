@@ -1,4 +1,4 @@
-# example_use_of_apache_airflow
+# apache_airflow_example
 An example of Apache Airflow for loading S3 data into Apache Redshift and transform
 
 # Data Pipeline with Apache Airflow
@@ -124,3 +124,21 @@ And below is an example of what the data in a log file, 2018-11-12-events.json, 
 4. `time`
   - Fields: start_time, hour, day, week, month, year, weekday
   - start_time field must be unique
+
+## Project Files
+
+#### 1. DAG's
+
+  - airflow/dags/udac_example_dag.py : Dag file running the whole process
+  - airflow/dags/data_quality_check_dag.py : Dag file with data quality check code only
+
+#### 2. SQL file
+
+  - airflow/plugins/helpers/sql_queries.py : File containing table creation and insert queries
+
+#### 3. Operators
+
+  - airflow/plugins/operators/stage_redshift.py : Operator file for loading data from S3 to Redshift
+  - airflow/plugins/operators/load_fact.py : Operator file for loading songplays fact data
+  - airflow/plugins/operators/load_dimension.py : Operator file for loading dimension data
+  - airflow/plugins/operators/data_quality.py : Operator file for checking data quality
