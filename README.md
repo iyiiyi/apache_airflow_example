@@ -1,6 +1,3 @@
-# apache_airflow_example
-An example of Apache Airflow for loading S3 data into Apache Redshift and transform
-
 # Data Pipeline with Apache Airflow
 This project is for building a sample data pipeline using Apache Airflow.
 
